@@ -4,7 +4,7 @@ import { expect, test, describe } from "vitest";
 
 describe("basic chalk compatibility", () => {
 	test("it can combine styled and normal strings", () => {
-		const ns = nodeStyles.blue("Hello") + " World" + chalk.red("!");
+		const ns = nodeStyles.blue("Hello") + " World" + nodeStyles.red("!");
 		const c = chalk.blue("Hello") + " World" + chalk.red("!");
 		expect(ns).toBe(c);
 	});
