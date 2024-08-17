@@ -1,6 +1,8 @@
 # colsys
 
 ![npm bundle size](https://img.shields.io/bundlephobia/min/colsys)
+![NPM Version](https://img.shields.io/npm/v/colsys)
+![NPM Downloads](https://img.shields.io/npm/dw/colsys)
 
 WIP light and zero-dependecy terminal string styling library.
 
