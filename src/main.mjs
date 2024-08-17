@@ -7,9 +7,9 @@ const handler = {
 		return new Proxy(() => ({ properties }), handler);
 	},
 
-	apply(target, _thisArg, [message]) {
+	apply(target, _thisArg, args) {
 		const properties = target?.()?.properties;
-		return styleText(properties, message);
+		return styleText(properties, args.join(' '));
 	},
 };
 
