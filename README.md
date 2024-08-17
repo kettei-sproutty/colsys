@@ -13,5 +13,5 @@ WIP light and zero-dependecy terminal string styling library.
   - [ ] Nest styles of the same type even (color, underline, background)
   - [x] Works with ES2015 template literal
 - [ ] Chalk advanced compatibility
- - [ ] RGB
- - [ ] HEX
+  - [ ] RGB
+  - [ ] HEX
