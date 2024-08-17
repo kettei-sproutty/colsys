@@ -8,8 +8,18 @@ type NodeStylesProxy = {
 	[key in Params]: NodeStylesProxy & ((...args: any[]) => string);
 };
 
+/**
+ * Returns a formatted text based on `colors`, `bg` and `modifiers`, based on
+ * [node:util styleText](https://nodejs.org/docs/latest-v22.x/api/util.html#utilstyletextformat-text).
+ * @example
+ * ```ts
+ * colsys.bold("bold");
+ * colsys.red("red");
+ * colsys.bgRed("bgRed");
+ * colsys.red.bold("red+bold");
+ * ```
+ */
 declare const nodeStyles: NodeStylesProxy;
 
-nodeStyles.bgBlack("hello");
 
 export default nodeStyles;
