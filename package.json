@@ -1,15 +1,14 @@
 {
 	"name": "node-styles",
-	"version": "1.0.0",
+	"version": "0.1.0",
 	"description": "",
+  "license": "(MIT OR Apache-2.0)",
 	"main": "src/main.mjs",
 	"scripts": {
 		"format": "biome format --write",
 		"test": "vitest"
 	},
 	"keywords": [],
-	"author": "",
-	"license": "ISC",
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@types/node": "^22.4.0",
