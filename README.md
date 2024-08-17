@@ -4,7 +4,7 @@ WIP light and zero-dependecy terminal string styling library.
 
 ## Roadmap
 
-- [ ] Typescript support
+- [x] Typescript support
 - [ ] Chalk basic compatibility
   - [x] Combine styled and normal strings
   - [x] Compose multiple styles using the chainable API
