@@ -2,7 +2,7 @@ import nodeStyles from "../src/main.mjs";
 import chalk from "chalk";
 import { expect, test, describe } from "vitest";
 
-describe("chalk compatibility", () => {
+describe("basic chalk compatibility", () => {
 	test("it can combine styled and normal strings", () => {
 		const ns = nodeStyles.blue("Hello") + " World" + chalk.red("!");
 		const c = chalk.blue("Hello") + " World" + chalk.red("!");
@@ -60,4 +60,20 @@ describe("chalk compatibility", () => {
 
 		expect(ns).toBe(c);
 	});
+});
+
+describe("advanced chalk compatibility", () => {
+	test("it can parse RGB", () => {
+    const ns = nodeStyles.rgb(123, 45, 67).underline('Underlined reddish color');
+    const c = chalk.rgb(123, 45, 67).underline('Underlined reddish color');
+
+    expect(ns).toBe(c);
+  })
+
+  test('it can parse HEX', () => {
+    const ns = nodeStyles.hex('#DEADED').bold('Bold gray!');
+    const c = chalk.hex('#DEADED').bold('Bold gray!');
+
+    expect(ns).toBe(c);
+  })
 });
