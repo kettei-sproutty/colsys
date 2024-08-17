@@ -1,6 +1,6 @@
 {
 	"name": "colsys",
-	"version": "0.1.6",
+	"version": "0.1.8",
   "main": "src/main.mjs",
   "sideEffects": false,
 	"contributors": [
