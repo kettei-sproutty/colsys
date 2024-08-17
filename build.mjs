@@ -1,5 +1,5 @@
-import { exec, execSync } from "child_process";
-import fs from "fs";
+import { execSync } from "node:child_process";
+import fs from "node:fs";
 
 const pkg = fs.readFileSync("package.json");
 const packageJSON = JSON.parse(pkg);
