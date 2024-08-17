@@ -1,7 +1,8 @@
 {
 	"name": "colsys",
-	"version": "0.1.5",
+	"version": "0.1.6",
   "main": "src/main.mjs",
+  "sideEffects": false,
 	"contributors": [
 		"Luca di Gianventura <lutaok>",
 		"Alessio Marchi <kettei-sproutty>"
