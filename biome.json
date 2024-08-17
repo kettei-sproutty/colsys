@@ -3,6 +3,9 @@
 	"organizeImports": {
 		"enabled": true
 	},
+	"files": {
+		"ignore": ["src/main.d.ts", "tests/**/*.js"]
+	},
 	"linter": {
 		"enabled": true,
 		"rules": {

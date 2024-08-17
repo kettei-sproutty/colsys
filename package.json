@@ -3,12 +3,22 @@
 	"version": "0.1.0",
 	"description": "",
 	"license": "(MIT OR Apache-2.0)",
-	"main": "src/main.mjs",
+	"keywords": [],
+	"files": ["src", "package.json"],
+	"exports": {
+		".": {
+			"default": "./src/main.mjs",
+			"import": "./src/main.mjs",
+			"require": "./src/main.cjs",
+			"node": "./src/main.mjs",
+			"types": "./src/main.d.ts"
+		}
+	},
 	"scripts": {
+		"build": "node build.mjs",
 		"format": "biome format --write",
 		"test": "vitest"
 	},
-	"keywords": [],
 	"devDependencies": {
 		"@biomejs/biome": "^1.8.3",
 		"@types/node": "^22.4.0",
