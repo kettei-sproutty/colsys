@@ -3,3 +3,6 @@ node_modules
 
 # Vitest
 coverage
+
+# Misc
+.DS_Store
