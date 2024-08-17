@@ -4,8 +4,8 @@ type OmitArray<T> = T extends (infer U)[] ? U : T;
 
 type Params = OmitArray<Parameters<typeof styleText>[0]>;
 
-type NodeStylesProxy = {
-	[key in Params]: NodeStylesProxy & ((...args: any[]) => string);
+type ColsysProxy = {
+	[key in Params]: ColsysProxy & ((...args: any[]) => string);
 };
 
 /**
@@ -19,7 +19,6 @@ type NodeStylesProxy = {
  * colsys.red.bold("red+bold");
  * ```
  */
-declare const nodeStyles: NodeStylesProxy;
+declare const colsys: ColsysProxy;
 
-
-export default nodeStyles;
+export default colsys;

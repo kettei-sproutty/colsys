@@ -12,7 +12,6 @@ fs.writeFileSync("package.json", JSON.stringify(packageJSON, undefined, "\t"));
 
 const execPromise = promisify(exec);
 
-await execPromise("pnpm pack");
 const { stdout } =  await execPromise("pnpm publish --no-git-checks")
 
 console.log(stdout);
