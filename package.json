@@ -4,7 +4,7 @@
 	"description": "",
 	"license": "(MIT OR Apache-2.0)",
 	"keywords": [],
-	"files": ["src", "package.json", "LICENSE-MIT", "LICENSE-APACHE"],
+	"files": ["src", "package.json"],
 	"exports": {
 		".": {
 			"default": "./src/main.mjs",
