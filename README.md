@@ -1,6 +1,26 @@
-# [WIP] Node Styles
+# colsys
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/colsys)
 
 WIP light and zero-dependecy terminal string styling library.
+
+## Guide
+
+```ts
+import colsys from 'colsys';
+
+// modifiers
+colsys.bold("bold");
+
+// colors
+colsys.red("red");
+
+// background
+colsys.bgRed("bgRed");
+
+// chaining
+colsys.bold.bgBlack.white("Hello, world!");
+```
 
 ## Roadmap
 
