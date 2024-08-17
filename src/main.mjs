@@ -9,7 +9,7 @@ const handler = {
 
 	apply(target, _thisArg, args) {
 		const properties = target?.()?.properties;
-		return styleText(properties, args.join(' '));
+		return styleText(properties, args.join(" "));
 	},
 };
 
