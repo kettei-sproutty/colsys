@@ -7,8 +7,6 @@ const packageJSON = JSON.parse(pkg);
 packageJSON.scripts = undefined;
 packageJSON.devDependencies = undefined;
 
-console.log(packageJSON);
-
 fs.writeFileSync("package.json", JSON.stringify(packageJSON, undefined, "\t"));
 
 execSync("pnpm pack");
