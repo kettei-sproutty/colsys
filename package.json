@@ -1,17 +1,17 @@
 {
 	"name": "colsys",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"description": "A light and zero-dependecy terminal string styling library",
 	"license": "(MIT OR Apache-2.0)",
 	"keywords": [
-    "colsys",
+		"colsys",
 		"color",
 		"colors",
 		"terminal",
 		"console",
 		"style",
 		"styles",
-    "format",
+		"format",
 		"log",
 		"text",
 		"terminal-colors",
@@ -21,7 +21,7 @@
 		"terminal-effects",
 		"color-toolkit",
 		"console-effects"
-  ],
+	],
 	"files": [
 		"src",
 		"package.json",
@@ -39,8 +39,8 @@
 			"types": "./src/main.d.ts"
 		}
 	},
-	"scripts": {
-		"build": "node build.mjs",
+  "scripts": {
+		"release": "node release.mjs",
 		"format": "biome format --write",
 		"test": "vitest"
 	},
