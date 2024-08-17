@@ -1,10 +1,35 @@
 {
 	"name": "node-styles",
 	"version": "0.1.0",
-	"description": "",
+	"description": "A light and zero-dependecy terminal string styling library",
 	"license": "(MIT OR Apache-2.0)",
-	"keywords": [],
-	"files": ["src", "package.json"],
+	"keywords": [
+    "colsys",
+		"color",
+		"colors",
+		"terminal",
+		"console",
+		"style",
+		"styles",
+    "format",
+		"log",
+		"text",
+		"terminal-colors",
+		"text-styling",
+		"terminal-styling",
+		"console-colors",
+		"terminal-effects",
+		"color-toolkit",
+		"console-effects"
+  ],
+	"files": [
+		"src",
+		"package.json",
+		"README.md",
+		"LICENSE-APACHE",
+		"LICENSE-MIT"
+	],
+	"repository": "https://github.com/kettei-sproutty/colsys.git",
 	"exports": {
 		".": {
 			"default": "./src/main.mjs",

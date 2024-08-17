@@ -1,10 +1,30 @@
-# [WIP] Node Styles
+# colsys
+
+![npm bundle size](https://img.shields.io/bundlephobia/min/colsys)
 
 WIP light and zero-dependecy terminal string styling library.
 
+## Guide
+
+```ts
+import colsys from 'colsys';
+
+// modifiers
+colsys.bold("bold");
+
+// colors
+colsys.red("red");
+
+// background
+colsys.bgRed("bgRed");
+
+// chaining
+colsys.bold.bgBlack.white("Hello, world!");
+```
+
 ## Roadmap
 
-- [ ] Typescript support
+- [x] Typescript support
 - [ ] Chalk basic compatibility
   - [x] Combine styled and normal strings
   - [x] Compose multiple styles using the chainable API
