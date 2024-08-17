@@ -4,13 +4,15 @@
 ![NPM Version](https://img.shields.io/npm/v/colsys)
 ![NPM Downloads](https://img.shields.io/npm/dw/colsys)
 
-[Colsys](https://github.com/kettei-sproutty/colsys) is a WIP light and zero-dependecy terminal string styling library.
+[Colsys](https://github.com/kettei-sproutty/colsys) is a lightweight and zero-dependency terminal string styling library designed to provide easy and efficient styling options for terminal outputs.
+It relies specifically on [node:utils](https://nodejs.org/docs/latest-v22.x/api/util.html#utilstyletextformat-text), which is a part of Node.js and is currently in active development.
+
 
 ```bash
 npm i colsys
 ```
 
-## Guide
+## Usage
 
 ```ts
 import colsys from 'colsys';
