@@ -4,6 +4,15 @@
 	"description": "",
 	"license": "(MIT OR Apache-2.0)",
 	"main": "src/main.mjs",
+  "exports": {
+    ".": {
+      "default": "./src/main.mjs",
+      "import": "./src/main.mjs",
+      "require": "./src/main.cjs",
+      "node": "./src/main.mjs",
+      "types": "./src/main.d.ts"
+    }
+  },
 	"scripts": {
 		"format": "biome format --write",
 		"test": "vitest"
