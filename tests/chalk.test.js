@@ -64,16 +64,18 @@ describe("basic chalk compatibility", () => {
 
 describe("advanced chalk compatibility", () => {
 	test("it can parse RGB", () => {
-    const ns = nodeStyles.rgb(123, 45, 67).underline('Underlined reddish color');
-    const c = chalk.rgb(123, 45, 67).underline('Underlined reddish color');
+		const ns = nodeStyles
+			.rgb(123, 45, 67)
+			.underline("Underlined reddish color");
+		const c = chalk.rgb(123, 45, 67).underline("Underlined reddish color");
 
-    expect(ns).toBe(c);
-  })
+		expect(ns).toBe(c);
+	});
 
-  test('it can parse HEX', () => {
-    const ns = nodeStyles.hex('#DEADED').bold('Bold gray!');
-    const c = chalk.hex('#DEADED').bold('Bold gray!');
+	test("it can parse HEX", () => {
+		const ns = nodeStyles.hex("#DEADED").bold("Bold gray!");
+		const c = chalk.hex("#DEADED").bold("Bold gray!");
 
-    expect(ns).toBe(c);
-  })
+		expect(ns).toBe(c);
+	});
 });
