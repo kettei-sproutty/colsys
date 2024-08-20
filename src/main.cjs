@@ -1,21 +1,40 @@
-const util = require("node:util");
+const { styleText } = require("node:util");
 
-const handler = {
-	get(target, property) {
-    let properties = [];
-    if (target && typeof target === 'function' && target()) {
-      properties = target().properties || [];
-    }
-    properties.push(property)
-    return new Proxy(() => ({ properties }), handler);
-	},
+// Factory function to create a proxy with isolated state
+const createHandler = (properties = []) => {
+	return {
+		get(_target, property) {
+			// When a property is accessed, create a new proxy with the updated properties
+			return createColsysProxy([...properties, property]);
+		},
 
-	apply(target, _thisArg, args) {
-		const properties = target().properties;
-		return util.styleText(properties, args.join(" "));
-	},
+		apply(_target, _thisArg, args) {
+			// When the function is invoked, apply the styles using the accumulated properties
+			const style = styleText(properties, args.join(" "));
+			return style;
+		},
+	};
 };
 
-const nodeSyles = new Proxy(function() {}, handler);
+// Function that generates a new proxy with the given properties
+const createColsysProxy = (properties = []) => {
+	return new Proxy(() => {}, createHandler(properties));
+};
 
-module.exports = nodeSyles;
+/**
+ * Returns a formatted text based on `colors`, `bg`, and `modifiers`, based on
+ * [node:util styleText](https://nodejs.org/docs/latest-v22.x/api/util.html#utilstyletextformat-text).
+ * @example
+ * ```js
+ * colsys.bold("bold");
+ * colsys.red("red");
+ * colsys.bgRed("bgRed");
+ * colsys.red.bold("red+bold");
+ * colsys.red(`Hello ${colsys.underline.bgBlue("world")}!`);
+ * ```
+ *
+ * @type {import('./main.d.ts').ColsysProxy}
+ */
+const colsys = createColsysProxy();
+
+module.exports = colsys;

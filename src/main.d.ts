@@ -4,7 +4,7 @@ type OmitArray<T> = T extends (infer U)[] ? U : T;
 
 type Params = OmitArray<Parameters<typeof styleText>[0]>;
 
-type ColsysProxy = {
+export type ColsysProxy = {
 	[key in Params]: ColsysProxy & ((...args: any[]) => string);
 };
 
