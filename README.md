@@ -38,7 +38,8 @@ colsys.bold.bgBlack.white("Hello, world!");
   - [x] Compose multiple styles using the chainable API
   - [x] Pass in multiple arguments
   - [x] Nest styles
-  - [ ] Nest styles of the same type even (color, underline, background)
+  - [ ] Nest styles of the same type even (color, underline, background).
+    (`styleText` doesn't seems to support this).
   - [x] Works with ES2015 template literal
 - [ ] Chalk advanced compatibility
   - [ ] RGB
