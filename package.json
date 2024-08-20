@@ -1,6 +1,6 @@
 {
 	"name": "colsys",
-	"version": "0.2.0",
+	"version": "1.0.0",
 	"main": "src/main.mjs",
 	"sideEffects": false,
 	"contributors": [
@@ -30,7 +30,11 @@
 		"color-toolkit",
 		"console-effects"
 	],
-	"files": ["src", "package.json", "README.md"],
+	"files": [
+		"src",
+		"package.json",
+		"README.md"
+	],
 	"repository": "https://github.com/kettei-sproutty/colsys.git",
 	"exports": {
 		".": {
